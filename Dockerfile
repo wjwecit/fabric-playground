@@ -1,6 +1,6 @@
 FROM node:8-alpine
 ENV NPM_CONFIG_LOGLEVEL warn
-ENV NPM_REGISTRY http://192.168.134.131:4873
+ENV NPM_REGISTRY https://registry.npm.taobao.org
 ARG VERSION=latest
 RUN addgroup -g 1001 composer
 RUN adduser -u 1001 -G composer -s /bin/sh -D composer
