@@ -9,7 +9,7 @@ RUN apk add --no-cache make gcc g++ python git libc6-compat
 # Run as the composer user ID.
 USER composer
 
-RUN npm set registry NPM_REGISTRY
+RUN npm set registry $NPM_REGISTRY
 RUN npm config set prefix '/home/composer/.npm-global'
 RUN npm install --production -g pm2 composer-playground@0.19.6
 RUN npm cache clean --force
